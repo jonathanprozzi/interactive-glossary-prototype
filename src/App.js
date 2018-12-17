@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import GlossaryCardGrid from "./components/GlossaryCardGrid";
 
 class App extends Component {
   render() {
@@ -8,6 +8,7 @@ class App extends Component {
         <header>
           <h1>Interactive Glossary Prototype</h1>
         </header>
+        <GlossaryCardGrid />
       </div>
     );
   }
