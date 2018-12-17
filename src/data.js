@@ -6,5 +6,9 @@ export const terms = [
   {
     title: "Term Two",
     definition: "Term Two is the second item in this list"
+  },
+  {
+    title: "Term Three",
+    definition: "Term Three is the third item in this list"
   }
 ];
