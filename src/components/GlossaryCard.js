@@ -3,7 +3,12 @@ import styled from "styled-components";
 
 const GlossaryCard = props => (
   <CardWrapper>
-    <GlossaryTitle>{props.termTitle}</GlossaryTitle>
+    <GlossaryTitleContainer>
+      <GlossaryTitle>{props.termTitle}</GlossaryTitle>
+    </GlossaryTitleContainer>
+    <GlossaryPhotoContainer>
+      <GlossaryPhoto src={props.termImage} />
+    </GlossaryPhotoContainer>
     <GlossaryDefinition>{props.termDefinition}</GlossaryDefinition>
     <RevealButton>Reveal Definition</RevealButton>
   </CardWrapper>
@@ -13,27 +18,53 @@ const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fafafa;
-  padding: 2vh 1vw;
+  background-color: #fff;
+  padding: 2vh 2vw;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
 
+const GlossaryTitleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: space-around;
+  background: rgba(0, 145, 201, 0.6);
+  padding: 2vh 2vw;
+`;
+
 const GlossaryTitle = styled.h3`
+  margin: 0px;
   text-transform: uppercase;
   font-size: 3rem;
   color: #4f4f4f;
 `;
+
+const GlossaryPhotoContainer = styled.div``;
+
+const GlossaryPhoto = styled.img``;
 
 const GlossaryDefinition = styled.p`
   font-size: 2rem;
 `;
 
 const RevealButton = styled.button`
+  font-family: Avenir;
+  font-size: 1.8rem;
+  font-weight: bolder;
   background-color: #0091c9;
   color: #fafafa;
+  border: 2px solid #fafafa;
   padding: 1rem 2rem;
+  margin: 2vh 2vw;
   border-radius: 5px;
+
+  &:hover {
+    border: 2px solid #0091c9;
+    background-color: #fafafa;
+    color: #0091c9;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+  }
 `;
 
 export default GlossaryCard;
