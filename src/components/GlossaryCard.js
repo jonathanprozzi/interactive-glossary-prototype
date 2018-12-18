@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 class GlossaryCard extends React.Component {
+  state = {
+    askingQuestion: false
+  };
   render() {
     return (
       <CardWrapper>
@@ -10,7 +13,11 @@ class GlossaryCard extends React.Component {
           <GlossaryTitle>{this.props.termTitle}</GlossaryTitle>
         </GlossaryTitleContainer>
         <GlossaryDefinition>{this.props.termDefinition}</GlossaryDefinition>
-        <RevealButton>reverted</RevealButton>
+        {this.state.askingQuestion ? (
+          <RevealButton>Reveal Definition</RevealButton>
+        ) : (
+          <RevealButton>Back to the Words</RevealButton>
+        )}
       </CardWrapper>
     );
   }
