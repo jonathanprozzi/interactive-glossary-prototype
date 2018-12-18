@@ -77,7 +77,7 @@ const GlossaryTitle = styled.h3`
 const GlossaryCopy = styled.p`
   font-size: 2rem;
   max-width: 20vw;
-  @media only screen and (min-width: 375px) {
+  @media only screen and (max-width: 1000px) {
     font-size: 2.5rem;
     max-width: 40vw;
   }

@@ -23,7 +23,7 @@ const MainGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 2vw;
   grid-row-gap: 2vh;
-  @media only screen and (min-width: 375px) {
+  @media only screen and (max-width: 1000px) {
     grid-template-columns: 1fr;
   }
 `;
