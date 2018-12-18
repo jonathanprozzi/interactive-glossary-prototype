@@ -4,8 +4,14 @@ import styled from "styled-components";
 
 class GlossaryCard extends React.Component {
   state = {
-    askingQuestion: false
+    askingQuestion: true
   };
+
+  toggleQuestionState = e => {
+    this.setState({ askingQuestion: !this.state.askingQuestion });
+    console.log(this.state.askingQuestion);
+  };
+
   render() {
     return (
       <CardWrapper>
@@ -18,9 +24,13 @@ class GlossaryCard extends React.Component {
           <GlossaryCopy>{this.props.termDefinition}</GlossaryCopy>
         )}
         {this.state.askingQuestion ? (
-          <RevealButton>Reveal Definition</RevealButton>
+          <RevealButton onClick={this.toggleQuestionState}>
+            Reveal Definition
+          </RevealButton>
         ) : (
-          <RevealButton>Back to the Words</RevealButton>
+          <RevealButton onClick={this.toggleQuestionState}>
+            Back to the Words
+          </RevealButton>
         )}
       </CardWrapper>
     );
