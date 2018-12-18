@@ -1,26 +1,31 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Header from "./components/Header";
 import GlossaryCardGrid from "./components/GlossaryCardGrid";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <header>
-          <h1>Interactive Glossary Prototype</h1>
-        </header>
+      <AppWrapper>
+        <Header />
         <ContentWrapper>
           <GlossaryCardGrid />
         </ContentWrapper>
-      </div>
+      </AppWrapper>
     );
   }
 }
+
+const AppWrapper = styled.div`
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+`;
 
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5vh;
 `;
 
 export default App;
