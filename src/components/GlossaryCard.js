@@ -8,6 +8,7 @@ class GlossaryCard extends React.Component {
   };
 
   toggleQuestionState = e => {
+    e.preventDefault();
     this.setState({ askingQuestion: !this.state.askingQuestion });
     console.log(this.state.askingQuestion);
   };
