@@ -11,5 +11,8 @@ export const terms = [
   {
     title: "Term Three",
     definition: "Term Three is the third item in this list"
+  },
+  {
+    title: "Term Four"
   }
 ];

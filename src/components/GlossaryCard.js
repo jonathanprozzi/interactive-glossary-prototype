@@ -14,10 +14,12 @@ const GlossaryCard = props => (
 );
 
 GlossaryCard.propTypes = {
-  terms: PropTypes.shape({
-    termTitle: PropTypes.string.isRequired,
-    termDefinition: PropTypes.string.isRequired
-  })
+  termTitle: PropTypes.string.isRequired,
+  termDefinition: PropTypes.string.isRequired
+};
+
+GlossaryCard.defaultProps = {
+  termDefinition: "Definition not available."
 };
 
 const CardWrapper = styled.div`
