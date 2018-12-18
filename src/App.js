@@ -5,7 +5,7 @@ import GlossaryCardGrid from "./components/GlossaryCardGrid";
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <header>
           <h1>Interactive Glossary Prototype</h1>
         </header>
