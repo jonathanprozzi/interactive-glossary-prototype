@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const GlossaryCard = props => (
@@ -11,6 +12,12 @@ const GlossaryCard = props => (
     <RevealButton>Reveal Definition</RevealButton>
   </CardWrapper>
 );
+
+GlossaryCard.propTypes = {
+  termTitle: PropTypes.string,
+  termDefinition: PropTypes.string,
+  termImage: PropTypes.img
+};
 
 const CardWrapper = styled.div`
   display: flex;
