@@ -1,7 +1,8 @@
 export const terms = [
   {
     title: "Prototype",
-    definition: "A prototype is a first model or version of something"
+    definition: "A prototype is a first model or version of something",
+    img: "../src/mini-maker-prototype.jpg"
   },
   {
     title: "Term Two",

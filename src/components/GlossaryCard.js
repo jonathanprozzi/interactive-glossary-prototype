@@ -6,9 +6,7 @@ const GlossaryCard = props => (
     <GlossaryTitleContainer>
       <GlossaryTitle>{props.termTitle}</GlossaryTitle>
     </GlossaryTitleContainer>
-    <GlossaryPhotoContainer>
-      <GlossaryPhoto src={props.termImage} />
-    </GlossaryPhotoContainer>
+    <GlossaryPhoto src={props.termImage} />
     <GlossaryDefinition>{props.termDefinition}</GlossaryDefinition>
     <RevealButton>Reveal Definition</RevealButton>
   </CardWrapper>
@@ -28,7 +26,7 @@ const GlossaryTitleContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: space-around;
-  background: rgba(0, 145, 201, 0.6);
+  background: rgba(0, 145, 201, 0.5);
   padding: 2vh 2vw;
 `;
 
@@ -36,10 +34,10 @@ const GlossaryTitle = styled.h3`
   margin: 0px;
   text-transform: uppercase;
   font-size: 3rem;
-  color: #4f4f4f;
+  color: #000;
 `;
 
-const GlossaryPhotoContainer = styled.div``;
+const GlossaryPhotoContainer = styled.figure``;
 
 const GlossaryPhoto = styled.img``;
 
@@ -51,17 +49,17 @@ const RevealButton = styled.button`
   font-family: Avenir;
   font-size: 1.8rem;
   font-weight: bolder;
-  background-color: #0091c9;
-  color: #fafafa;
-  border: 2px solid #fafafa;
+  background-color: #fafafa;
+  color: #0091c9;
+  border: 2px solid #0091c9;
   padding: 1rem 2rem;
   margin: 2vh 2vw;
   border-radius: 5px;
 
   &:hover {
     border: 2px solid #0091c9;
-    background-color: #fafafa;
-    color: #0091c9;
+    background-color: #0091c9;
+    color: #fafafa;
     transition: all ease-in-out 0.3s;
     cursor: pointer;
   }
