@@ -12,7 +12,11 @@ class GlossaryCard extends React.Component {
         <GlossaryTitleContainer>
           <GlossaryTitle>{this.props.termTitle}</GlossaryTitle>
         </GlossaryTitleContainer>
-        <GlossaryDefinition>{this.props.termDefinition}</GlossaryDefinition>
+        {this.state.askingQuestion ? (
+          <GlossaryCopy>{this.props.termQuestion}</GlossaryCopy>
+        ) : (
+          <GlossaryCopy>{this.props.termDefinition}</GlossaryCopy>
+        )}
         {this.state.askingQuestion ? (
           <RevealButton>Reveal Definition</RevealButton>
         ) : (
@@ -25,11 +29,13 @@ class GlossaryCard extends React.Component {
 
 GlossaryCard.propTypes = {
   termTitle: PropTypes.string.isRequired,
+  termQuestion: PropTypes.string.isRequired,
   termDefinition: PropTypes.string.isRequired
 };
 
 GlossaryCard.defaultProps = {
   termTitle: "Title not available!",
+  termQuestion: "Question not available",
   termDefinition: "Definition not available."
 };
 
@@ -58,7 +64,7 @@ const GlossaryTitle = styled.h3`
   color: #000;
 `;
 
-const GlossaryDefinition = styled.p`
+const GlossaryCopy = styled.p`
   font-size: 2rem;
 `;
 

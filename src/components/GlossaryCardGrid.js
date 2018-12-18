@@ -9,6 +9,7 @@ const GlossaryCardGrid = props => (
       <GlossaryCard
         key={term.id}
         termTitle={term.title}
+        termQuestion={term.question}
         termDefinition={term.definition}
       />
     ))}
