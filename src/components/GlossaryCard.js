@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const GlossaryCard = props => (
-  <CardWrapper>
-    <GlossaryTitleContainer>
-      <GlossaryTitle>{props.termTitle}</GlossaryTitle>
-    </GlossaryTitleContainer>
-    <GlossaryDefinition>{props.termDefinition}</GlossaryDefinition>
-    <RevealButton>Reveal Definition</RevealButton>
-  </CardWrapper>
-);
+function GlossaryCard(props) {
+  const buttonState = useState("question");
+
+  return (
+    <CardWrapper>
+      <GlossaryTitleContainer>
+        <GlossaryTitle>{props.termTitle}</GlossaryTitle>
+      </GlossaryTitleContainer>
+      <GlossaryDefinition>{props.termDefinition}</GlossaryDefinition>
+      <RevealButton>{buttonState}</RevealButton>
+    </CardWrapper>
+  );
+}
 
 GlossaryCard.propTypes = {
   termTitle: PropTypes.string.isRequired,
