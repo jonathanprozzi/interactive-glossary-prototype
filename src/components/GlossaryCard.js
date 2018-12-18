@@ -19,6 +19,7 @@ GlossaryCard.propTypes = {
 };
 
 GlossaryCard.defaultProps = {
+  termTitle: "Title not available!",
   termDefinition: "Definition not available."
 };
 

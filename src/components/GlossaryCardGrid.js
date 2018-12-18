@@ -7,7 +7,7 @@ const GlossaryCardGrid = props => (
   <MainGrid>
     {terms.map(term => (
       <GlossaryCard
-        key={term.title}
+        key={term.id}
         termTitle={term.title}
         termDefinition={term.definition}
       />
