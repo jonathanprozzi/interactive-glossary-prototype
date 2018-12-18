@@ -14,9 +14,10 @@ const GlossaryCard = props => (
 );
 
 GlossaryCard.propTypes = {
-  termTitle: PropTypes.string,
-  termDefinition: PropTypes.string,
-  termImage: PropTypes.img
+  terms: PropTypes.shape({
+    termTitle: PropTypes.string.isRequired,
+    termDefinition: PropTypes.string.isRequired
+  })
 };
 
 const CardWrapper = styled.div`
