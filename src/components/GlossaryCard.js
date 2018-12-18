@@ -7,7 +7,6 @@ const GlossaryCard = props => (
     <GlossaryTitleContainer>
       <GlossaryTitle>{props.termTitle}</GlossaryTitle>
     </GlossaryTitleContainer>
-    <GlossaryPhoto src={props.termImage} />
     <GlossaryDefinition>{props.termDefinition}</GlossaryDefinition>
     <RevealButton>Reveal Definition</RevealButton>
   </CardWrapper>
@@ -47,10 +46,6 @@ const GlossaryTitle = styled.h3`
   font-size: 3rem;
   color: #000;
 `;
-
-const GlossaryPhotoContainer = styled.figure``;
-
-const GlossaryPhoto = styled.img``;
 
 const GlossaryDefinition = styled.p`
   font-size: 2rem;
