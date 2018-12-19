@@ -4,7 +4,7 @@ export const terms = [
     title: "Prototype",
     question: "What is a prototype?",
     definition: "A prototype is a first model or version of something",
-    img: "../src/mini-maker-prototype.jpg"
+    img: "/images/mini-maker-prototype.jpg"
   },
   {
     id: 2,

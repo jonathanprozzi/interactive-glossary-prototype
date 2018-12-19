@@ -11,6 +11,7 @@ const GlossaryCardGrid = props => (
         termTitle={term.title}
         termQuestion={term.question}
         termDefinition={term.definition}
+        termImage={term.img}
       />
     ))}
   </MainGrid>

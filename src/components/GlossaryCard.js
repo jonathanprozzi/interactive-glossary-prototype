@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { TransitionGroup, CSSTransition } from react-transition-group;
 
 class GlossaryCard extends Component {
   state = {
@@ -49,7 +48,6 @@ GlossaryCard.defaultProps = {
   termQuestion: "Question not available",
   termDefinition: "Definition not available."
 };
-
 
 const CardWrapper = styled.div`
   display: flex;
