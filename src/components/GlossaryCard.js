@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { TransitionGroup, CSSTransition } from react-transition-group;
 
 class GlossaryCard extends Component {
   state = {
@@ -29,7 +30,7 @@ class GlossaryCard extends Component {
           </RevealButton>
         ) : (
           <RevealButton onClick={this.toggleQuestionState}>
-            Back to the Words
+            Back to the Question
           </RevealButton>
         )}
       </CardWrapper>
@@ -48,6 +49,7 @@ GlossaryCard.defaultProps = {
   termQuestion: "Question not available",
   termDefinition: "Definition not available."
 };
+
 
 const CardWrapper = styled.div`
   display: flex;
